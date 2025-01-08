@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuro-Pop Film</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    /* General Styling */
+    body {
+      background-color: #121212; /* Black background */
+      color: #ffffff; /* White text */
+    }
+
+    a {
+      color: #ff69b4; /* Pink links */
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: #ff85c5; /* Lighter pink hover effect */
+    }
+
+    /* Header */
+    header {
+      background-color: #1a1a1a; /* Darker black for header */
+      border-bottom: 2px solid #ff69b4; /* Pink border */
+    }
+
+    header h2 {
+      color: #ff69b4; /* Pink logo text */
+    }
+
+    header img {
+      border-radius: 50%; /* Rounded logo */
+    }
+
+    /* Sidebar */
+    .offcanvas {
+      background-color: #1a1a1a;
+    }
+
+    .offcanvas h5 {
+      color: #ff69b4;
+    }
+
+    .offcanvas ul li a {
+      font-weight: bold;
+    }
+
+    .offcanvas ul li a:hover {
+      text-decoration: underline;
+      color: #ff85c5;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1a1a1a; /* Dark navbar */
+      border-bottom: 1px solid #ff69b4;
+    }
+
+    .navbar .nav-link {
+      color: #1a1a1a;
+      font-weight: 500;
+    }
+
+    .navbar .nav-link:hover {
+      color: #ff69b4;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background-color: #ff69b4;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #ff85c5;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a1a1a;
+    }
+
+    footer h4 {
+      color: #ff69b4;
+    }
+
+    footer p {
+      color: #ffffff;
+    }
+
+    footer a {
+      color: #ff69b4;
+    }
+
+    footer a:hover {
+      color: #ff85c5;
+    }
+  </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white">
+      <div class="container d-flex align-items-center justify-content-between">
+        <!-- Logo -->
+        <div class="d-flex align-items-center">
+          <a href="index.html">
+            <img src="assets/Kuro-Pop Film.png" alt="Kuro-Pop Film Logo" class="me-2" style="width: 75px;">
+          </a>
+          <h2 class="m-0">Kuro-Pop Film</h2>
+        </div>
+        <!-- Sidebar Toggle Button -->
+        <button class="btn btn-outline-light me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- Search Form -->
+        <form>
+          <h5>Search</h5>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search groups...">
+            <button class="btn btn-primary" type="submit">Go</button>
+          </div>
+        </form>
+        <hr>
+        <h5>Navigation</h5>
+        <ul class="list-unstyled">
+          <!-- Featured Groups -->
+          <li class="mb-3">
+            <a href="index.html#hero" class="text-decoration-none text-white fw-bold">Featured Groups</a>
+            <ul class="list-unstyled mt-2 ms-3">
+              <li><a href="stray-kids.html" class="text-decoration-none text-white">Stray Kids</a></li>
+              <li><a href="ateez.html" class="text-decoration-none text-white">ATEEZ</a></li>
+              <li><a href="txt.html" class="text-decoration-none text-white">TXT</a></li>
+              <li><a href="le-sserafim.html" class="text-decoration-none text-white">LE SSERAFIM</a></li>
+              <li><a href="aespa.html" class="text-decoration-none text-white">aespa</a></li>
+            </ul>
+          </li>
+          
+          <!-- Fanart & Fancam Collections -->
+          <li class="mb-3">
+            <a href="fanart-fancam.html" class="text-decoration-none text-white fw-bold">Fanart & Fancam Collections</a>
+            <ul class="list-unstyled mt-2 ms-3">
+              <li><a href="fanart-fancam.html#groups" class="text-decoration-none text-white">Fanart</a></li>
+              <li><a href="fanart-fancam.html#groups" class="text-decoration-none text-white">Fancam</a></li>
+            </ul>
+          </li>
+          
+          <!-- Latest Updates -->
+          <li class="mb-3">
+            <a href="latest-updates.html" class="text-decoration-none text-white fw-bold">Latest Updates</a>
+          </li>
+          
+          <!-- Interaction Corner -->
+          <li class="mb-3">
+            <a href="interaction-corner.html" class="text-decoration-none text-white fw-bold">Interaction Corner</a>
+            <ul class="list-unstyled mt-2 ms-3">
+              <li><a href="interaction-corner.html" class="text-decoration-none text-white">Quiz</a></li>
+              <li><a href="interaction-corner.html#forum" class="text-decoration-none text-white">Forum Discussion</a></li>
+            </ul>
+          </li>
+          
+          <!-- About Us -->
+          <li class="mb-3">
+            <a href="about.html" class="text-decoration-none text-white fw-bold">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav w-100 justify-content-around">
+                <li class="nav-item"><a class="nav-link text-center" href="index.html#hero">Featured Groups</a></li>
+              <li class="nav-item"><a class="nav-link text-center" href="fanart-fancam.html">Fanart & Fancam Collections</a></li>
+              <li class="nav-item"><a class="nav-link text-center" href="latest-updates.html">Latest Updates</a></li>
+              <li class="nav-item"><a class="nav-link text-center" href="interaction-corner.html">Interaction Corner</a></li>
+                <li class="nav-item"><a class="nav-link text-center" href="about.html">About Us</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>      
+  
+    <!-- Latest Updates -->
+    <section id="latest-updates" class="container my-4">
+      <h1>Latest Updates</h1>
+      <div class="row">
+        <hr>
+        <h3>Stray Kids</h3>
+        <div class="col-md-4">
+           <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">
+                Stray Kids Official Fanclub<br>STAY 5th Gen Welcome Video<br><br>🌦️ 
+                <a href="https://t.co/QHvvi6P97N">https://t.co/QHvvi6P97N</a><br><br>
+                ѕтay over тнe raιn<br><br>2025.01.06 1PM - 2025.01.19 11:59PM (KST)<br>@ YES24<br>
+                <br>☁️coмιng ѕoon☔️
+                <a href="https://twitter.com/hashtag/StrayKids?src=hash&amp;ref_src=twsrc%5Etfw">#StrayKids</a> 
+                <a href="https://twitter.com/hashtag/%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%ED%82%A4%EC%A6%88?src=hash&amp;ref_src=twsrc%5Etfw">#스트레이키즈</a>
+                <a href="https://twitter.com/hashtag/STAY?src=hash&amp;ref_src=twsrc%5Etfw">#STAY</a> 
+                <a href="https://twitter.com/hashtag/STAY5%EA%B8%B0?src=hash&amp;ref_src=twsrc%5Etfw">#STAY5기</a>
+                <a href="https://twitter.com/hashtag/YouMakeStrayKidsStay?src=hash&amp;ref_src=twsrc%5Etfw">#YouMakeStrayKidsStay</a> 
+                <a href="https://t.co/ZukThkdKt6">pic.twitter.com/ZukThkdKt6</a>
+              </p>&mdash; Stray Kids (@Stray_Kids) 
+                <a href="https://twitter.com/Stray_Kids/status/1875754189873410334?ref_src=twsrc%5Etfw">January 5, 2025</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="col-md-4">
+            <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">
+                Stray Kids 5TH FANMEETING<br>⋆˙⟡ 𝗦𝗞𝗭 𝟱&#39;𝗖𝗟𝗢𝗖𝗞 ✧˖°<br>
+                <br>Invitation Video<br>🧚 <a href="https://t.co/Ml9GYbTSWL">https://t.co/Ml9GYbTSWL</a><br>
+                <br>🕔2025.02.14-16 (KST)<br>📍INSPIRE ARENA<a href="https://twitter.com/hashtag/StrayKids?src=hash&amp;ref_src=twsrc%5Etfw">#StrayKids</a> 
+                <a href="https://twitter.com/hashtag/%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%ED%82%A4%EC%A6%88?src=hash&amp;ref_src=twsrc%5Etfw">#스트레이키즈</a>
+                <a href="https://twitter.com/hashtag/SKZ_5TH_FANMEETING?src=hash&amp;ref_src=twsrc%5Etfw">#SKZ_5TH_FANMEETING</a>
+                <a href="https://twitter.com/hashtag/SKZ_5CLOCK?src=hash&amp;ref_src=twsrc%5Etfw">#SKZ_5CLOCK</a>
+                <a href="https://twitter.com/hashtag/BeyondLIVE?src=hash&amp;ref_src=twsrc%5Etfw">#BeyondLIVE</a>
+                <a href="https://twitter.com/hashtag/YouMakeStrayKidsStay?src=hash&amp;ref_src=twsrc%5Etfw">#YouMakeStrayKidsStay</a> 
+                <a href="https://t.co/J0u9xVt484">pic.twitter.com/J0u9xVt484</a></p>&mdash; Stray Kids (@Stray_Kids) 
+                <a href="https://twitter.com/Stray_Kids/status/1876515406665629866?ref_src=twsrc%5Etfw">January 7, 2025</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="col-md-4">
+            <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">
+                &lt;나 혼자만 레벨업 시즌 2 -Arise from the Shadow-&gt; OST<br><br>LiSA &quot;ReawakeR (feat. Felix of Stray Kids)&quot; <br>
+                <br>Released Online<br> <br>MelOn <a href="https://t.co/D4jNv4nt7g">https://t.co/D4jNv4nt7g</a><br>FLO 
+                <a href="https://t.co/lZAoI5t9fk">https://t.co/lZAoI5t9fk</a><br>genie 
+                <a href="https://t.co/onF4XBtIrM">https://t.co/onF4XBtIrM</a><br>Bugs 
+                <a href="https://t.co/tKKf6yODDD">https://t.co/tKKf6yODDD</a><br> 
+                <a href="https://twitter.com/hashtag/StrayKids?src=hash&amp;ref_src=twsrc%5Etfw">#StrayKids</a> 
+                <a href="https://twitter.com/hashtag/%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%ED%82%A4%EC%A6%88?src=hash&amp;ref_src=twsrc%5Etfw">#스트레이키즈</a>
+                <a href="https://twitter.com/hashtag/%ED%95%84%EB%A6%AD%EC%8A%A4?src=hash&amp;ref_src=twsrc%5Etfw">#필릭스</a> 
+                <a href="https://twitter.com/hashtag/Felix?src=hash&amp;ref_src=twsrc%5Etfw">#Felix</a>…</p>&mdash; Stray Kids (@Stray_Kids) 
+                <a href="https://twitter.com/Stray_Kids/status/1875559885871706484?ref_src=twsrc%5Etfw">January 4, 2025</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+    </section>
+    <section id="latest-updates" class="container my-4">
+        <div class="row">
+          <hr>
+          <h3>Ateez</h3>
+          <div class="col-md-4">
+            <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">
+                ⛵ <a href="https://twitter.com/hashtag/ATEEZ?src=hash&amp;ref_src=twsrc%5Etfw">#ATEEZ</a> X 
+                <a href="https://twitter.com/hashtag/ANITEEZ?src=hash&amp;ref_src=twsrc%5Etfw">#ANITEEZ</a><br> ONLINE MERCH STORE<br> 
+                ‘𝐀𝐍𝐈𝐓𝐄𝐄𝐙 𝐈𝐍 𝐃𝐑𝐄𝐀𝐌𝐋𝐀𝐍𝐃’<br><br>OFFICIAL MERCH ONLINE SALES<br><br>⭐ 2025.01.07 TUE – 2025.01.17 FRI (KST)<br>🔗 TOKTOQ SHOP : 
+                <a href="https://t.co/k6VlEpJtQj">https://t.co/k6VlEpJtQj</a> <br>🔗 SOUNDWAVE MALL : 
+                <a href="https://t.co/daS6Aox9iG">https://t.co/daS6Aox9iG</a>
+                <a href="https://twitter.com/ATEEZofficial?ref_src=twsrc%5Etfw">@ATEEZofficial</a>
+                <a href="https://twitter.com/hashtag/%EC%97%90%EC%9D%B4%ED%8B%B0%EC%A6%88?src=hash&amp;ref_src=twsrc%5Etfw">#에이티즈</a> 
+                <a href="https://twitter.com/hashtag/%EC%95%A0%EB%8B%88%ED%8B%B0%EC%A6%88?src=hash&amp;ref_src=twsrc%5Etfw">#애니티즈</a>… 
+                <a href="https://t.co/Wp9MKSL7PD">pic.twitter.com/Wp9MKSL7PD</a></p>&mdash; ⛵ ANITEEZ IN DREAMLAND⭐ (@ateezpopup_sw) 
+                <a href="https://twitter.com/ateezpopup_sw/status/1876584643862126744?ref_src=twsrc%5Etfw">January 7, 2025</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+          <div class="col-md-4">
+            <blockquote class="twitter-tweet">
+              <p lang="ko" dir="ltr">
+                [📢] 2024 OUR TREASURE STORY With <a href="https://twitter.com/hashtag/ATINY?src=hash&amp;ref_src=twsrc%5Etfw">#ATINY</a> <br>🗂 
+                <a href="https://twitter.com/hashtag/ATEEZ?src=hash&amp;ref_src=twsrc%5Etfw">#ATEEZ</a> MAGAZINE Vol.5<br>
+                <br>ATEEZ와 ATINY의 보물 같은<br>2024년 추억✨들을 돌이켜보세요!😍<br><br>🔗 
+                <a href="https://t.co/rr5FQ6ccFV">https://t.co/rr5FQ6ccFV</a><br><br>TOKTOQ을 통해 우리들의 빛나는 이야기를 확인하실 수 있습니다❣
+                <a href="https://twitter.com/hashtag/%EC%97%90%EC%9D%B4%ED%8B%B0%EB%8B%88?src=hash&amp;ref_src=twsrc%5Etfw">#에이티니</a> 
+                <a href="https://twitter.com/hashtag/%EC%97%90%EC%9D%B4%ED%8B%B0%EC%A6%88?src=hash&amp;ref_src=twsrc%5Etfw">#에이티즈</a> 
+                <a href="https://t.co/losncUz093">pic.twitter.com/losncUz093</a></p>&mdash; ATEEZ(에이티즈) (@ATEEZofficial) 
+                <a href="https://twitter.com/ATEEZofficial/status/1876441284912828786?ref_src=twsrc%5Etfw">January 7, 2025</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+          <div class="col-md-4">
+            <blockquote class="twitter-tweet">
+              <p lang="ko" dir="ltr">
+                𝙉𝘼𝘾𝙄𝙁𝙄𝘾 𝙓 𝘼𝙏𝙀𝙀𝙕<br><br>𝒪𝒰𝑅 𝒮𝒯𝒪𝑅𝒴📖<br><br>🌡기온별 옷차림<br><br>22~20도: 니트, 후드<br>19~12도: 가디건, 맨투맨, 자켓<br>
+                4도 이하: 에이티즈 품 속으로 들어가기 <br><br>추운날씨 마음까지 <br>포근 따땃해지는 우리티즈들 보러 오세요<br><br>🩷
+                <a href="https://t.co/RaZJGpQnGv">https://t.co/RaZJGpQnGv</a>
+                <a href="https://twitter.com/hashtag/%EB%84%A4%EC%8B%9C%ED%94%BD?src=hash&amp;ref_src=twsrc%5Etfw">#네시픽</a> 
+                <a href="https://twitter.com/hashtag/%EC%97%90%EC%9D%B4%ED%8B%B0%EC%A6%88?src=hash&amp;ref_src=twsrc%5Etfw">#에이티즈</a> 
+                <a href="https://twitter.com/hashtag/nacific?src=hash&amp;ref_src=twsrc%5Etfw">#nacific</a> 
+                <a href="https://twitter.com/hashtag/ATEEZ?src=hash&amp;ref_src=twsrc%5Etfw">#ATEEZ</a> 
+                <a href="https://t.co/EkyRiMrS0e">pic.twitter.com/EkyRiMrS0e</a></p>&mdash; 네시픽 NACIFIC Official (@KrNacific) 
+                <a href="https://twitter.com/KrNacific/status/1876258416496177262?ref_src=twsrc%5Etfw">January 6, 2025</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
+      </section>
+      <section id="latest-updates" class="container my-4">
+        <div class="row">
+          <hr>
+          <h3>Tomorrow X Together</h3>
+          <div class="col-md-4">
+            <blockquote class="twitter-tweet">
+              <p lang="ko" dir="ltr">
+                &#39;The 39th GOLDEN DISC AWARDS&#39; Dance Practice | TXT (투모로우바이투게더) <br>(<a href="https://t.co/Xdyv8rArag">https://t.co/Xdyv8rArag</a>)
+                <a href="https://twitter.com/hashtag/%ED%88%AC%EB%AA%A8%EB%A1%9C%EC%9A%B0%EB%B0%94%EC%9D%B4%ED%88%AC%EA%B2%8C%EB%8D%94?src=hash&amp;ref_src=twsrc%5Etfw">#투모로우바이투게더</a> 
+                <a href="https://twitter.com/hashtag/TOMORROW_X_TOGETHER?src=hash&amp;ref_src=twsrc%5Etfw">#TOMORROW_X_TOGETHER</a> 
+                <a href="https://twitter.com/hashtag/TXT?src=hash&amp;ref_src=twsrc%5Etfw">#TXT</a> 
+                <a href="https://twitter.com/hashtag/GoldenDiscAwards?src=hash&amp;ref_src=twsrc%5Etfw">#GoldenDiscAwards</a> 
+                <a href="https://twitter.com/hashtag/GDA?src=hash&amp;ref_src=twsrc%5Etfw">#GDA</a> 
+                <a href="https://t.co/D2uwOjCF1F">pic.twitter.com/D2uwOjCF1F</a></p>&mdash; TXT OFFICIAL (@TXT_bighit) 
+                <a href="https://twitter.com/TXT_bighit/status/1876569493687906642?ref_src=twsrc%5Etfw">January 7, 2025</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+          <div class="col-md-4">
+            <blockquote class="twitter-tweet">
+              <p lang="ko" dir="ltr">
+                [Notice] TOMORROW X TOGETHER WORLD TOUR &lt;ACT : PROMISE&gt; - EP. 2 - IN INCHEON 오프라인 공연 안내 (+ENG/JPN/CHN)
+                <a href="https://t.co/yzYhn614Hv">https://t.co/yzYhn614Hv</a>
+                <a href="https://twitter.com/hashtag/%ED%88%AC%EB%AA%A8%EB%A1%9C%EC%9A%B0%EB%B0%94%EC%9D%B4%ED%88%AC%EA%B2%8C%EB%8D%94?src=hash&amp;ref_src=twsrc%5Etfw">#투모로우바이투게더</a> 
+                <a href="https://twitter.com/hashtag/TOMORROW_X_TOGETHER?src=hash&amp;ref_src=twsrc%5Etfw">#TOMORROW_X_TOGETHER</a> 
+                <a href="https://twitter.com/hashtag/TXT?src=hash&amp;ref_src=twsrc%5Etfw">#TXT</a> 
+                <a href="https://twitter.com/hashtag/ACT_PROMISE_EP2?src=hash&amp;ref_src=twsrc%5Etfw">#ACT_PROMISE_EP2</a> 
+                <a href="https://twitter.com/hashtag/TXT_TOUR_ACTPROMISE_EP2?src=hash&amp;ref_src=twsrc%5Etfw">#TXT_TOUR_ACTPROMISE_EP2</a></p>&mdash; TXT OFFICIAL (@TXT_bighit) 
+                <a href="https://twitter.com/TXT_bighit/status/1876493996371145140?ref_src=twsrc%5Etfw">January 7, 2025</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+          <div class="col-md-4">
+            <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">
+                🐰🦊🧸🐱🐧🎬<br><br>&quot;MOAs all around the world, attention!&quot;<br>TOMORROW X TOGETHER : HYPERFOCUS IN CINEMAS is finally on the big screen for fans worldwide!<br>
+                <br>And here’s something special for MOAs—your lightsticks are part of the movie!<br>Bring your lightsticks and make the theater shine… 
+                <a href="https://t.co/T5n5rAcJbn">pic.twitter.com/T5n5rAcJbn</a></p>&mdash; cj4dplexfilm (@4dplexfilm) 
+                <a href="https://twitter.com/4dplexfilm/status/1875894696830206250?ref_src=twsrc%5Etfw">January 5, 2025</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
+      </section>
+      <section id="latest-updates" class="container my-4">
+        <div class="row">
+          <hr>
+          <h3>Le Sserafim</h3>
+          <div class="col-md-4">
+            <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">
+                [FEARNOT ONLY]<br>LE SSERAFIM [FIM UNITED] TEASER - &#39;PARTY&#39;<br><br>📍 
+                <a href="https://t.co/YC1sQkA9ZO">https://t.co/YC1sQkA9ZO</a>
+                <a href="https://twitter.com/hashtag/LE_SSERAFIM?src=hash&amp;ref_src=twsrc%5Etfw">#LE_SSERAFIM</a> 
+                <a href="https://twitter.com/hashtag/%EB%A5%B4%EC%84%B8%EB%9D%BC%ED%95%8C?src=hash&amp;ref_src=twsrc%5Etfw">#르세라핌</a>
+                <a href="https://twitter.com/hashtag/FEARNOT?src=hash&amp;ref_src=twsrc%5Etfw">#FEARNOT</a> 
+                <a href="https://twitter.com/hashtag/%ED%94%BC%EC%96%B4%EB%82%98?src=hash&amp;ref_src=twsrc%5Etfw">#피어나</a> 
+                <a href="https://t.co/OfZe8Jhl87">pic.twitter.com/OfZe8Jhl87</a></p>&mdash; LE SSERAFIM (@le_sserafim) 
+                <a href="https://twitter.com/le_sserafim/status/1876554368947982500?ref_src=twsrc%5Etfw">January 7, 2025</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+          <div class="col-md-4">
+            <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">LE SSERAFIM (르세라핌) The 39th GOLDEN DISC AWARDS Dress Rehearsal<br><br>📍 
+                <a href="https://t.co/KDdnNU6Ta5">https://t.co/KDdnNU6Ta5</a>
+                <a href="https://twitter.com/hashtag/LE_SSERAFIM?src=hash&amp;ref_src=twsrc%5Etfw">#LE_SSERAFIM</a> 
+                <a href="https://twitter.com/hashtag/%EB%A5%B4%EC%84%B8%EB%9D%BC%ED%95%8C?src=hash&amp;ref_src=twsrc%5Etfw">#르세라핌</a>
+                <a href="https://twitter.com/hashtag/LE_SSERAFIM_CRAZY?src=hash&amp;ref_src=twsrc%5Etfw">#LE_SSERAFIM_CRAZY</a>
+                <a href="https://twitter.com/hashtag/GoldenDiscAwards?src=hash&amp;ref_src=twsrc%5Etfw">#GoldenDiscAwards</a></p>&mdash; LE SSERAFIM (@le_sserafim) 
+                <a href="https://twitter.com/le_sserafim/status/1876584567223759230?ref_src=twsrc%5Etfw">January 7, 2025</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+          <div class="col-md-4">
+            <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">
+                LE SSERAFIM GLOBAL OFFICIAL FANCLUB FEARNOT MEMBERSHIP Renewal Message<br> <br>📍 
+                <a href="https://t.co/mjICco4Vit">https://t.co/mjICco4Vit</a>
+                <a href="https://twitter.com/hashtag/LE_SSERAFIM?src=hash&amp;ref_src=twsrc%5Etfw">#LE_SSERAFIM</a> 
+                <a href="https://twitter.com/hashtag/%EB%A5%B4%EC%84%B8%EB%9D%BC%ED%95%8C?src=hash&amp;ref_src=twsrc%5Etfw">#르세라핌</a>
+                <a href="https://twitter.com/hashtag/FEARNOT?src=hash&amp;ref_src=twsrc%5Etfw">#FEARNOT</a> 
+                <a href="https://twitter.com/hashtag/%ED%94%BC%EC%96%B4%EB%82%98?src=hash&amp;ref_src=twsrc%5Etfw">#피어나</a> 
+                <a href="https://t.co/VLY2MYjl3T">pic.twitter.com/VLY2MYjl3T</a></p>&mdash; LE SSERAFIM (@le_sserafim) 
+                <a href="https://twitter.com/le_sserafim/status/1876131798020939880?ref_src=twsrc%5Etfw">January 6, 2025</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
+      </section>
+      <section id="latest-updates" class="container my-4">
+        <div class="row">
+          <hr>
+          <h3>Aespa</h3>
+          <div class="col-md-4">
+            <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">
+                aespa 에스파 &#39;Whiplash&#39; MV hits 100M views!<br>Thank you MY for your love and support ⚙️<br> 
+                <a href="https://t.co/1185nnrdtU">https://t.co/1185nnrdtU</a><br> 
+                <a href="https://twitter.com/hashtag/aespa?src=hash&amp;ref_src=twsrc%5Etfw">#aespa</a> 
+                <a href="https://twitter.com/hashtag/%C3%A6spa?src=hash&amp;ref_src=twsrc%5Etfw">#æspa</a> 
+                <a href="https://twitter.com/hashtag/%EC%97%90%EC%8A%A4%ED%8C%8C?src=hash&amp;ref_src=twsrc%5Etfw">#에스파</a>
+                <a href="https://twitter.com/hashtag/Whiplash?src=hash&amp;ref_src=twsrc%5Etfw">#Whiplash</a> 
+                <a href="https://twitter.com/hashtag/aespaWhiplash?src=hash&amp;ref_src=twsrc%5Etfw">#aespaWhiplash</a> 
+                <a href="https://t.co/M2RJyy0O5c">pic.twitter.com/M2RJyy0O5c</a></p>&mdash; aespa (@aespa_official) 
+                <a href="https://twitter.com/aespa_official/status/1876539324034134171?ref_src=twsrc%5Etfw">January 7, 2025</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+          <div class="col-md-4">
+            <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">
+                SMTOWN LIVE 2025 <br>1st OFFICIAL MERCHANDISE DETAILS <br><br>▶Sales Dates&amp;Times 
+                <br>On-site Booth : 2025.01.11 (SAT) - 2025.01.12 (SUN) 10:00 - 16:00 [KST] 
+                <br>Online Pre-Orders : 2025.01.06 (MON) 15:00 - 2025.01.15 (WED) 23:59 [KST] <br><br>▶Online Store<br>SMTOWN &amp;STORE : 
+                <a href="https://t.co/w9baAVbDAR">https://t.co/w9baAVbDAR</a>… 
+                <a href="https://t.co/eWIHSZF1Eg">pic.twitter.com/eWIHSZF1Eg</a></p>&mdash; SMTOWN (@SMTOWNGLOBAL) 
+                <a href="https://twitter.com/SMTOWNGLOBAL/status/1876146680430756145?ref_src=twsrc%5Etfw">January 6, 2025</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+          <div class="col-md-4">
+            <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">
+                We’ve been looking forward to decorating the Christmas tree! 🌲
+                <a href="https://twitter.com/hashtag/aespa?src=hash&amp;ref_src=twsrc%5Etfw">#aespa</a> 
+                <a href="https://twitter.com/hashtag/%C3%A6spa?src=hash&amp;ref_src=twsrc%5Etfw">#æspa</a> 
+                <a href="https://twitter.com/hashtag/%EC%97%90%EC%8A%A4%ED%8C%8C?src=hash&amp;ref_src=twsrc%5Etfw">#에스파</a>
+                <a href="https://twitter.com/hashtag/ONE_PRODUCTION?src=hash&amp;ref_src=twsrc%5Etfw">#ONE_PRODUCTION</a> 
+                <a href="https://twitter.com/hashtag/Christmas?src=hash&amp;ref_src=twsrc%5Etfw">#Christmas</a> 
+                <a href="https://t.co/5VnN2rb9HW">pic.twitter.com/5VnN2rb9HW</a></p>&mdash; aespa (@aespa_official) 
+                <a href="https://twitter.com/aespa_official/status/1871211256604139873?ref_src=twsrc%5Etfw">December 23, 2024</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+  
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-4">
+      <div class="container">
+        <div class="row">
+          <!-- About Section -->
+          <div class="col-md-5 d-flex align-items-start">
+            <img src="assets/Kuro-Pop Film.png" alt="Kuro-Pop Film Logo" class="me-2" style="width: 100px;">
+            <div>
+              <h4 class="m-0">Kuro-Pop Film</h4>
+              <p class="mt-2">
+                Kuro-Pop Film is your ultimate <br> destination for all things K-pop. 
+              </p>
+            </div>
+          </div>
+          
+          <!-- Contact Section -->
+          <div class="col-md-4">
+            <div>
+              <h4>Contact Us</h4>
+              <p>
+                Email: <a href="mailto:kimhansolove93@gmail.com" class="text-white text-decoration-none">kimhansolove93@gmail.com</a><br>
+                Phone: <a href="tel:+60199015976" class="text-white text-decoration-none">+60 19-901 5976</a>
+              </p>
+            </div>
+          </div>
+          
+          <!-- Social Media Links -->
+          <div class="col-md-3">
+            <div>
+              <h4>Follow Us</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://x.com/hfjjoknyang" class="text-white text-decoration-none">Twitter</a></li>
+                <li><a href="https://www.instagram.com/tsukkyhime" class="text-white text-decoration-none">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>    
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2025 Kuro-Pop Film. All Rights Reserved.</p>
+    </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
