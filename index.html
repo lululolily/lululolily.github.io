@@ -41,12 +41,8 @@
       background-color: #1a1a1a;
     }
 
-    .offcanvas h5 {
+    .offcanvas h3 {
       color: #ff69b4;
-    }
-
-    .offcanvas ul li a {
-      font-weight: bold;
     }
 
     .offcanvas ul li a:hover {
@@ -121,19 +117,10 @@
 
     <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
       <div class="offcanvas-header">
+        <h3>Navigation</h3>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <!-- Search Form -->
-        <form>
-          <h5>Search</h5>
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search groups...">
-            <button class="btn btn-primary" type="submit">Go</button>
-          </div>
-        </form>
-        <hr>
-        <h5>Navigation</h5>
         <ul class="list-unstyled">
           <!-- Featured Groups -->
           <li class="mb-3">
@@ -399,3 +386,41 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>
+
+<script>
+  // Search functionality
+  document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("searchInput");
+    const groupList = document.getElementById("groupList");
+    const groupItems = groupList.querySelectorAll(".group-item");
+
+    // Search event listener
+    searchInput.addEventListener("input", () => {
+      const searchTerm = searchInput.value.toLowerCase();
+
+      groupItems.forEach(item => {
+        const groupName = item.textContent.toLowerCase();
+        if (groupName.includes(searchTerm)) {
+          item.style.display = "";  // Show matching group
+        } else {
+          item.style.display = "none";  // Hide non-matching group
+        }
+      });
+    });
+
+    // Optional: You can also handle form submission (e.g., prevent page reload)
+    const searchForm = document.getElementById("searchForm");
+    searchForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const searchTerm = searchInput.value.toLowerCase();
+      groupItems.forEach(item => {
+        const groupName = item.textContent.toLowerCase();
+        if (groupName.includes(searchTerm)) {
+          item.style.display = "";  // Show matching group
+        } else {
+          item.style.display = "none";  // Hide non-matching group
+        }
+      });
+    });
+  });
+</script>

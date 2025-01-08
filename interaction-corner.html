@@ -41,12 +41,8 @@
       background-color: #1a1a1a;
     }
 
-    .offcanvas h5 {
+    .offcanvas h3 {
       color: #ff69b4;
-    }
-
-    .offcanvas ul li a {
-      font-weight: bold;
     }
 
     .offcanvas ul li a:hover {
@@ -140,19 +136,10 @@
 
     <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
       <div class="offcanvas-header">
+        <h3>Navigation</h3>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <!-- Search Form -->
-        <form>
-          <h5>Search</h5>
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search groups...">
-            <button class="btn btn-primary" type="submit">Go</button>
-          </div>
-        </form>
-        <hr>
-        <h5>Navigation</h5>
         <ul class="list-unstyled">
           <!-- Featured Groups -->
           <li class="mb-3">
@@ -302,61 +289,79 @@
 </html>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const postMessageButton = document.getElementById("postMessage");
-      let discussionSectionAdded = false;
-  
-      postMessageButton.addEventListener("click", () => {
-        const username = document.getElementById("username").value.trim();
-        const message = document.getElementById("message").value.trim();
-  
-        if (!username || !message) {
-          alert("Please fill in both fields!");
-          return;
+  document.addEventListener("DOMContentLoaded", () => {
+    const postMessageButton = document.getElementById("postMessage");
+    let discussionSectionAdded = false;
+
+    postMessageButton.addEventListener("click", () => {
+      const username = document.getElementById("username").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!username || !message) {
+        alert("Please fill in both fields!");
+        return;
+      }
+
+      // Add the "Discussion" heading and message list dynamically (once)
+      if (!discussionSectionAdded) {
+        const forumSection = document.getElementById("forum");
+
+        // Create a wrapper div with `mx-4`
+        const discussionWrapper = document.createElement("div");
+        discussionWrapper.className = "mx-4";
+
+        // Create Discussion Header
+        const discussionHeader = document.createElement("h3");
+        discussionHeader.textContent = "Discussion:";
+        discussionWrapper.appendChild(discussionHeader);
+
+        // Create Message List
+        const messageList = document.createElement("ul");
+        messageList.id = "forumMessages";
+        messageList.className = "list-group";
+        discussionWrapper.appendChild(messageList);
+
+        // Append the wrapper to the forum section
+        forumSection.appendChild(discussionWrapper);
+
+        discussionSectionAdded = true;
+      }
+
+      // Function to detect and embed Spotify links
+      const embedSpotifyLink = (message) => {
+        // Regex for Spotify track, album, playlist URLs (with or without parameters)
+        const spotifyRegex = /(https?:\/\/open\.spotify\.com\/(track|album|playlist)\/[a-zA-Z0-9]+(\?si=[a-zA-Z0-9]+)*)/g;
+        const match = message.match(spotifyRegex);
+
+        if (match) {
+          // Extract the Spotify URL and create the embed iframe
+          match.forEach(url => {
+            const embedUrl = url.replace('https://open.spotify.com', 'https://open.spotify.com/embed');
+            const embedCode = `<iframe src="${embedUrl}" width="300" height="80" frameborder="0" allow="encrypted-media"></iframe>`;
+            message = message.replace(url, embedCode); // Replace the Spotify URL with the embed code
+          });
         }
-  
-        // Add the "Discussion" heading and message list dynamically (once)
-        if (!discussionSectionAdded) {
-          const forumSection = document.getElementById("forum");
-  
-          // Create a wrapper div with `mx-4`
-          const discussionWrapper = document.createElement("div");
-          discussionWrapper.className = "mx-4";
-  
-          // Create Discussion Header
-          const discussionHeader = document.createElement("h3");
-          discussionHeader.textContent = "Discussion:";
-          discussionWrapper.appendChild(discussionHeader);
-  
-          // Create Message List
-          const messageList = document.createElement("ul");
-          messageList.id = "forumMessages";
-          messageList.className = "list-group";
-          discussionWrapper.appendChild(messageList);
-  
-          // Append the wrapper to the forum section
-          forumSection.appendChild(discussionWrapper);
-  
-          discussionSectionAdded = true;
-        }
-  
-        // Add the new message
-        const forumMessages = document.getElementById("forumMessages");
-        const messageItem = document.createElement("li");
-        messageItem.className = "list-group-item";
-  
-        // Add the username, timestamp, and message
-        const currentDate = new Date();
-        const timestamp = currentDate.toLocaleString();
-        messageItem.innerHTML = `<strong>${username}</strong> <span class="text-muted">(${timestamp})</span>:<br>${message}`;
-        forumMessages.appendChild(messageItem);
-  
-        // Clear the input fields
-        document.getElementById("username").value = "";
-        document.getElementById("message").value = "";
-      });
+        return message;
+      };
+
+      // Add the new message
+      const forumMessages = document.getElementById("forumMessages");
+      const messageItem = document.createElement("li");
+      messageItem.className = "list-group-item";
+
+      // Add the username, timestamp, and message with Spotify embed if applicable
+      const currentDate = new Date();
+      const timestamp = currentDate.toLocaleString();
+      const messageWithEmbed = embedSpotifyLink(message);
+      messageItem.innerHTML = `<strong>${username}</strong> <span class="text-muted">(${timestamp})</span>:<br>${messageWithEmbed}`;
+      forumMessages.appendChild(messageItem);
+
+      // Clear the input fields
+      document.getElementById("username").value = "";
+      document.getElementById("message").value = "";
     });
-  </script>
+  });
+</script>
     
 <script>
     document.addEventListener("DOMContentLoaded", () => {
