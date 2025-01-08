@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuro-Pop Film</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+
+    a {
+      color: #ff69b4; /* Pink links */
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: #ff85c5; /* Lighter pink hover effect */
+    }
+
+    /* Header */
+    header {
+      background-color: #1a1a1a; /* Darker black for header */
+      border-bottom: 2px solid #ff69b4; /* Pink border */
+    }
+
+    header h2 {
+      color: #ff69b4; /* Pink logo text */
+    }
+
+    header img {
+      border-radius: 50%; /* Rounded logo */
+    }
+
+    /* Sidebar */
+    .offcanvas {
+      background-color: #1a1a1a;
+    }
+
+    .offcanvas h5 {
+      color: #ff69b4;
+    }
+
+    .offcanvas ul li a {
+      font-weight: bold;
+    }
+
+    .offcanvas ul li a:hover {
+      text-decoration: underline;
+      color: #ff85c5;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1a1a1a; /* Dark navbar */
+      border-bottom: 1px solid #ff69b4;
+    }
+
+    .navbar .nav-link {
+      color: #1a1a1a;
+      font-weight: 500;
+    }
+
+    .navbar .nav-link:hover {
+      color: #ff69b4;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background-color: #ff69b4;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #ff85c5;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a1a1a;
+    }
+
+    footer h4 {
+      color: #ff69b4;
+    }
+
+    footer p {
+      color: #ffffff;
+    }
+
+    footer a {
+      color: #ff69b4;
+    }
+
+    footer a:hover {
+      color: #ff85c5;
+    }
+  </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white">
+      <div class="container d-flex align-items-center justify-content-between">
+        <!-- Logo -->
+        <div class="d-flex align-items-center">
+          <a href="index.html">
+            <img src="assets/Kuro-Pop Film.png" alt="Kuro-Pop Film Logo" class="me-2" style="width: 75px;">
+          </a>
+          <h2 class="m-0">Kuro-Pop Film</h2>
+        </div>
+        <!-- Sidebar Toggle Button -->
+        <button class="btn btn-outline-light me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- Search Form -->
+        <form>
+          <h5>Search</h5>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search groups...">
+            <button class="btn btn-primary" type="submit">Go</button>
+          </div>
+        </form>
+        <hr>
+        <h5>Navigation</h5>
+        <ul class="list-unstyled">
+          <!-- Featured Groups -->
+          <li class="mb-3">
+            <a href="index.html#hero" class="text-decoration-none text-white fw-bold">Featured Groups</a>
+            <ul class="list-unstyled mt-2 ms-3">
+              <li><a href="stray-kids.html" class="text-decoration-none text-white">Stray Kids</a></li>
+              <li><a href="ateez.html" class="text-decoration-none text-white">ATEEZ</a></li>
+              <li><a href="txt.html" class="text-decoration-none text-white">TXT</a></li>
+              <li><a href="le-sserafim.html" class="text-decoration-none text-white">LE SSERAFIM</a></li>
+              <li><a href="aespa.html" class="text-decoration-none text-white">aespa</a></li>
+            </ul>
+          </li>
+          
+          <!-- Fanart & Fancam Collections -->
+          <li class="mb-3">
+            <a href="fanart-fancam.html" class="text-decoration-none text-white fw-bold">Fanart & Fancam Collections</a>
+            <ul class="list-unstyled mt-2 ms-3">
+              <li><a href="fanart-fancam.html#groups" class="text-decoration-none text-white">Fanart</a></li>
+              <li><a href="fanart-fancam.html#groups" class="text-decoration-none text-white">Fancam</a></li>
+            </ul>
+          </li>
+          
+          <!-- Latest Updates -->
+          <li class="mb-3">
+            <a href="index.html#latest-updates" class="text-decoration-none text-white fw-bold">Latest Updates</a>
+          </li>
+          
+          <!-- Interaction Corner -->
+          <li class="mb-3">
+            <a href="interaction-corner.html" class="text-decoration-none text-white fw-bold">Interaction Corner</a>
+            <ul class="list-unstyled mt-2 ms-3">
+              <li><a href="interaction-corner.html" class="text-decoration-none text-white">Quiz</a></li>
+              <li><a href="interaction-corner.html#forum" class="text-decoration-none text-white">Forum Discussion</a></li>
+            </ul>
+          </li>
+          
+          <!-- About Us -->
+          <li class="mb-3">
+            <a href="about.html" class="text-decoration-none text-white fw-bold">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav w-100 justify-content-around">
+                <li class="nav-item"><a class="nav-link text-center" href="index.html#hero">Featured Groups</a></li>
+              <li class="nav-item"><a class="nav-link text-center" href="fanart-fancam.html">Fanart & Fancam Collections</a></li>
+              <li class="nav-item"><a class="nav-link text-center" href="index.html#latest-updates">Latest Updates</a></li>
+              <li class="nav-item"><a class="nav-link text-center" href="interaction-corner.html">Interaction Corner</a></li>
+                <li class="nav-item"><a class="nav-link text-center" href="about.html">About Us</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>       
+  
+    <section id="groups" class="container mt-4">
+      <div class="mx-4">
+        <h1>Ateez</h1>
+        <div>
+            <img src="assets/ateez.png" class="d-block w-100 my-3" alt="Ateez">
+        </div>
+        <h2 class="py-2">About Group</h2>
+        <p>
+            <b>ATEEZ (에이티즈)</b>, known pre-debut as <b>KQ Fellaz</b>, is a 8-member boy group under <b>KQ Entertainment</b>. 
+            The group consists of: <b>Seonghwa, Hongjoong, Yunho, Yeosang, San, Mingi, Wooyoung, and Jongho.</b> 
+            They released the pre-debut song, From on July 9, 2018 with another trainee named <b>Junyoung</b>. 
+            The group debuted on October 24, 2018 with their first mini album, Treasure Ep.1: All to Zero. 
+            On July 8, 2019, ATEEZ signed with USA record label <b>RCA Records</b>. 
+            They are also signed to the Japanese record label <b>Nippon Columbia</b> since 2019.
+        </p>
+        <p>ATEEZ Official Fandom Name: ATINY</p>
+        <hr>
+      </div>
+    </section>
+    <section id="group-members-profile" class="container mt-4">
+        <div class="mx-4">
+          <h2>Group Members Profile</h2>
+          <div class="row">
+            <div class="col-md-4 my-2">
+              <div class="card">
+                <img src="ateez/hongjoong.png" class="card-img-top px-4 pt-4" alt="Hongjoong">
+                <div class="card-body">
+                  <h5 class="card-title">Hongjoong</h5>
+                  <p>
+                    <strong>Stage Name:</strong> Hongjoong (홍중)<br>
+                    <strong>Birth Name:</strong> Kim Hong Joong (김홍중)<br>
+                    <strong>Position(s):</strong> Captain, Main Rapper, Vocalist, Composer, Center<br>
+                    <strong>Birthday:</strong> November 7th, 1998<br>
+                    <strong>Zodiac Sign:</strong> Scorpio<br>
+                    <strong>Height:</strong> 172 cm (5’8″)<br>
+                    <strong>Blood Type:</strong> B<br>
+                    <strong>MBTI Type:</strong> INFP-A<br>
+                    <strong>Nationality:</strong> Korean<br>
+                    <strong>Representative Emoji:</strong> 🐿<br>
+                    <strong>Instagram:</strong> <a href="https://www.instagram.com/no1likeme8_8/">@no1likeme8_8</a><br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 my-2">
+              <div class="card">
+                <img src="ateez/seonghwa.png" class="card-img-top px-4 pt-4" alt="Seonghwa">
+                <div class="card-body">
+                  <h5 class="card-title">Seonghwa</h5>
+                  <p>
+                    <strong>Stage Name:</strong> Seonghwa (성화)<br>
+                    <strong>Birth Name:</strong> Park Seong Hwa (박성화)<br>
+                    <strong>Position(s):</strong> Vocalist, Rapper, Performer, Visual<br>
+                    <strong>Birthday:</strong> April 3rd, 1998<br>
+                    <strong>Zodiac Sign:</strong> Aries<br>
+                    <strong>Height:</strong> 178 cm (5’10″)<br>
+                    <strong>Blood Type:</strong> O<br>
+                    <strong>MBTI Type:</strong> ENFJ-T<br>
+                    <strong>Nationality:</strong> Korean<br>
+                    <strong>Representative Emoji:</strong> 🐰/⭐️<br>
+                    <strong>Instagram:</strong> <a href="https://www.instagram.com/_starhwa_/">@_starhwa_</a><br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 my-2">
+              <div class="card">
+                <img src="ateez/yunho.png" class="card-img-top px-4 pt-4" alt="Yunho">
+                <div class="card-body">
+                  <h5 class="card-title">Yunho</h5>
+                  <p>
+                    <strong>Stage Name:</strong> Yunho (윤호)<br>
+                    <strong>Birth Name:</strong> Jeong Yun Ho (정윤호)<br>
+                    <strong>Position(s):</strong> Main Dancer, Vocalist<br>
+                    <strong>Birthday:</strong> March 23rd, 1999<br>
+                    <strong>Chinese Zodiac Sign:</strong> Aries<br>
+                    <strong>Zodiac Sign:</strong> Leo<br>
+                    <strong>Height:</strong> 186 cm (6’1”)<br>
+                    <strong>Blood Type:</strong> A<br>
+                    <strong>MBTI Type:</strong> ENFJ-A<br>
+                    <strong>Nationality:</strong> Korean<br>
+                    <strong>Representative Emoji: </strong>🐶<br>
+                    <strong>Instagram:</strong> <a href="https://www.instagram.com/yunou._.u/">@yunou._.u</a><br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 my-2">
+              <div class="card">
+                <img src="ateez/yeosang.png" class="card-img-top px-4 pt-4" alt="Yeosang">
+                <div class="card-body">
+                  <h5 class="card-title">Yeosang</h5>
+                  <p>
+                    <strong>Stage Name:</strong> Yeosang (여상)<br>
+                    <strong>Birth Name:</strong> Kang Yeo Sang (강여상)<br>
+                    <strong>Position(s):</strong> Vocalist, Rapper, Performer, Visual<br>
+                    <strong>Birthday:</strong> June 15th, 1999<br>
+                    <strong>Zodiac Sign:</strong> Gemini<br>
+                    <strong>Height:</strong> 175 cm (5’9″)<br>
+                    <strong>Blood Type:</strong> A<br>
+                    <strong>MBTI Type:</strong> ISFJ<br>
+                    <strong>Nationality:</strong> Korean<br>
+                    <strong>Representative Emoji:</strong> 👑<br>
+                    <strong>Instagram:</strong> <a href="https://www.instagram.com/im_ovation/">@im_ovation</a><br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 my-2">
+              <div class="card">
+                <img src="ateez/san.png" class="card-img-top px-4 pt-4" alt="San">
+                <div class="card-body">
+                  <h5 class="card-title">San</h5>
+                  <p>
+                    <strong>Stage Name:</strong> San (산)<br>
+                    <strong>Birth Name:</strong> Choi San (최산)<br>
+                    <strong>Position(s):</strong> Main Dancer, Lead Vocalist<br>
+                    <strong>Birthday:</strong> July 10th, 1999<br>
+                    <strong>Zodiac Sign:</strong> Cancer<br>
+                    <strong>Height:</strong> 178 cm (5’10″)<br>
+                    <strong>Blood Type:</strong> B<br>
+                    <strong>MBTI Type:</strong> INTJ<br>
+                    <strong>Nationality:</strong> Korean<br>
+                    <strong>epresentative Emoji: </strong>⛰<br>
+                    <strong>Instagram:</strong> <a href="https://www.instagram.com/choi3an/">@choi3an</a><br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 my-2">
+              <div class="card">
+                <img src="ateez/mingi.png" class="card-img-top px-4 pt-4" alt="Mingi">
+                <div class="card-body">
+                  <h5 class="card-title">Mingi</h5>
+                  <p>
+                    <strong>Stage Name:</strong> Mingi (민기)<br>
+                    <strong>Birth Name:</strong> Song Min Gi (송민기)<br>
+                    <strong>Korean Name:</strong> Lee Yong-bok (이용복)<br>
+                    <strong>Position(s):</strong> Main Dancer, Main Rapper, Vocalist<br>
+                    <strong>Birthday:</strong> August 9th, 1999<br>
+                    <strong>Zodiac Sign:</strong> Leo<br>
+                    <strong>Height:</strong> 184 cm (6’0″)<br>
+                    <strong>Blood Type:</strong> B<br>
+                    <strong>MBTI Type:</strong> ENTP-T<br>
+                    <strong>Nationality:</strong> Korean<br>
+                    <strong>Representative Emoji:</strong> 🐺/🐥<br>
+                    <strong>Instagram:</strong> <a href="https://www.instagram.com/fixon_n_on/">@fixon_n_on</a><br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 my-2">
+              <div class="card">
+                <img src="ateez/wooyoung.png" class="card-img-top px-4 pt-4" alt="Wooyoung">
+                <div class="card-body">
+                  <h5 class="card-title">Wooyoung</h5>
+                  <p>
+                    <strong>Stage Name:</strong> Wooyoung (우영)<br>
+                    <strong>Birth Name:</strong> Jung Woo Young (정우영)<br>
+                    <strong>Position(s):</strong> Main Dancer, Vocalist<br>
+                    <strong>Birthday:</strong> November 26th, 1999<br>
+                    <strong>Zodiac Sign:</strong> Sagittarius<br>
+                    <strong>Height:</strong> 173 cm (5’8″)<br>
+                    <strong>Blood Type:</strong> A<br>
+                    <strong>MBTI Type:</strong> ISTJ<br>
+                    <strong>Nationality:</strong> Korean<br>
+                    <strong>Representative Emoji:</strong> 🦊<br>
+                    <strong>Instagram:</strong> <a href="https://www.instagram.com/wooyounggg__/">@wooyounggg__</a><br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 my-2">
+              <div class="card">
+                <img src="ateez/jongho.png" class="card-img-top px-4 pt-4" alt="Jongho">
+                <div class="card-body">
+                  <h5 class="card-title">Jongho</h5>
+                  <p>
+                    <strong>Stage Name:</strong> Jongho (종호)<br>
+                    <strong>Birth Name:</strong> Choi Jong Ho (최종호)<br>
+                    <strong>Position(s):</strong> Main Vocalist, Maknae<br>
+                    <strong>Birthday:</strong> October 12th, 2000<br>
+                    <strong>Zodiac Sign:</strong> Libra<br>
+                    <strong>Height:</strong> 176 cm (5’9”)<br>
+                    <strong>Blood Type:</strong> O<br>
+                    <strong>MBTI Type:</strong> ISFP-T<br>
+                    <strong>Nationality:</strong> Korean<br>
+                    <strong>Representative Emoji:</strong> 🐻/🍎<br>
+                    <strong>Instagram:</strong> <a href="https://www.instagram.com/imfinalho_/">@imfinalho_</a><br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+        </div>     
+      </div>
+    </section>
+    <section id="groups-songs" class="container my-4">
+        <div class="mx-4">
+            <h2 class="py-2">Discography</h2>
+            <p>The list of their discography can be referred to this <a href="https://kprofiles.com/ateez-discography/">website</a></p>
+            <p><b>Follow the artist on Spotify to check out their latest song release</b></p>
+            <iframe src="https://open.spotify.com/embed/artist/68KmkJeZGfwe1OUaivBa2L?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+    </section>
+      
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-4">
+      <div class="container">
+        <div class="row">
+          <!-- About Section -->
+          <div class="col-md-5 d-flex align-items-start">
+            <img src="assets/Kuro-Pop Film.png" alt="Kuro-Pop Film Logo" class="me-2" style="width: 100px;">
+            <div>
+              <h4 class="m-0">Kuro-Pop Film</h4>
+              <p class="mt-2">
+                Kuro-Pop Film is your ultimate <br> destination for all things K-pop. 
+              </p>
+            </div>
+          </div>
+          
+          <!-- Contact Section -->
+          <div class="col-md-4">
+            <div>
+              <h4>Contact Us</h4>
+              <p>
+                Email: <a href="mailto:kimhansolove93@gmail.com" class="text-white text-decoration-none">kimhansolove93@gmail.com</a><br>
+                Phone: <a href="tel:+60199015976" class="text-white text-decoration-none">+60 19-901 5976</a>
+              </p>
+            </div>
+          </div>
+          
+          <!-- Social Media Links -->
+          <div class="col-md-3">
+            <div>
+              <h4>Follow Us</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://x.com/hfjjoknyang" class="text-white text-decoration-none">Twitter</a></li>
+                <li><a href="https://www.instagram.com/tsukkyhime" class="text-white text-decoration-none">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>    
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2025 Kuro-Pop Film. All Rights Reserved.</p>
+    </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>

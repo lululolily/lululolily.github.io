@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuro-Pop Film</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+
+    a {
+      color: #ff69b4; /* Pink links */
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: #ff85c5; /* Lighter pink hover effect */
+    }
+
+    /* Header */
+    header {
+      background-color: #1a1a1a; /* Darker black for header */
+      border-bottom: 2px solid #ff69b4; /* Pink border */
+    }
+
+    header h2 {
+      color: #ff69b4; /* Pink logo text */
+    }
+
+    header img {
+      border-radius: 50%; /* Rounded logo */
+    }
+
+    /* Sidebar */
+    .offcanvas {
+      background-color: #1a1a1a;
+    }
+
+    .offcanvas h5 {
+      color: #ff69b4;
+    }
+
+    .offcanvas ul li a {
+      font-weight: bold;
+    }
+
+    .offcanvas ul li a:hover {
+      text-decoration: underline;
+      color: #ff85c5;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1a1a1a; /* Dark navbar */
+      border-bottom: 1px solid #ff69b4;
+    }
+
+    .navbar .nav-link {
+      color: #1a1a1a;
+      font-weight: 500;
+    }
+
+    .navbar .nav-link:hover {
+      color: #ff69b4;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background-color: #ff69b4;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #ff85c5;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a1a1a;
+    }
+
+    footer h4 {
+      color: #ff69b4;
+    }
+
+    footer p {
+      color: #ffffff;
+    }
+
+    footer a {
+      color: #ff69b4;
+    }
+
+    footer a:hover {
+      color: #ff85c5;
+    }
+  </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white">
+      <div class="container d-flex align-items-center justify-content-between">
+        <!-- Logo -->
+        <div class="d-flex align-items-center">
+          <a href="index.html">
+            <img src="assets/Kuro-Pop Film.png" alt="Kuro-Pop Film Logo" class="me-2" style="width: 75px;">
+          </a>
+          <h2 class="m-0">Kuro-Pop Film</h2>
+        </div>
+        <!-- Sidebar Toggle Button -->
+        <button class="btn btn-outline-light me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- Search Form -->
+        <form>
+          <h5>Search</h5>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search groups...">
+            <button class="btn btn-primary" type="submit">Go</button>
+          </div>
+        </form>
+        <hr>
+        <h5>Navigation</h5>
+        <ul class="list-unstyled">
+          <!-- Featured Groups -->
+          <li class="mb-3">
+            <a href="index.html#hero" class="text-decoration-none text-white fw-bold">Featured Groups</a>
+            <ul class="list-unstyled mt-2 ms-3">
+              <li><a href="stray-kids.html" class="text-decoration-none text-white">Stray Kids</a></li>
+              <li><a href="ateez.html" class="text-decoration-none text-white">ATEEZ</a></li>
+              <li><a href="txt.html" class="text-decoration-none text-white">TXT</a></li>
+              <li><a href="le-sserafim.html" class="text-decoration-none text-white">LE SSERAFIM</a></li>
+              <li><a href="aespa.html" class="text-decoration-none text-white">aespa</a></li>
+            </ul>
+          </li>
+          
+          <!-- Fanart & Fancam Collections -->
+          <li class="mb-3">
+            <a href="fanart-fancam.html" class="text-decoration-none text-white fw-bold">Fanart & Fancam Collections</a>
+            <ul class="list-unstyled mt-2 ms-3">
+              <li><a href="fanart-fancam.html#groups" class="text-decoration-none text-white">Fanart</a></li>
+              <li><a href="fanart-fancam.html#groups" class="text-decoration-none text-white">Fancam</a></li>
+            </ul>
+          </li>
+          
+          <!-- Latest Updates -->
+          <li class="mb-3">
+            <a href="index.html#latest-updates" class="text-decoration-none text-white fw-bold">Latest Updates</a>
+          </li>
+          
+          <!-- Interaction Corner -->
+          <li class="mb-3">
+            <a href="interaction-corner.html" class="text-decoration-none text-white fw-bold">Interaction Corner</a>
+            <ul class="list-unstyled mt-2 ms-3">
+              <li><a href="interaction-corner.html" class="text-decoration-none text-white">Quiz</a></li>
+              <li><a href="interaction-corner.html#forum" class="text-decoration-none text-white">Forum Discussion</a></li>
+            </ul>
+          </li>
+          
+          <!-- About Us -->
+          <li class="mb-3">
+            <a href="about.html" class="text-decoration-none text-white fw-bold">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav w-100 justify-content-around">
+                <li class="nav-item"><a class="nav-link text-center" href="index.html#hero">Featured Groups</a></li>
+              <li class="nav-item"><a class="nav-link text-center" href="fanart-fancam.html">Fanart & Fancam Collections</a></li>
+              <li class="nav-item"><a class="nav-link text-center" href="index.html#latest-updates">Latest Updates</a></li>
+              <li class="nav-item"><a class="nav-link text-center" href="interaction-corner.html">Interaction Corner</a></li>
+                <li class="nav-item"><a class="nav-link text-center" href="about.html">About Us</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>      
+  
+    <section id="groups" class="container mt-4">
+      <div class="mx-4">
+        <h1>Le Sserafim</h1>
+        <div>
+            <img src="assets/le-sserafim.png" class="d-block w-100 my-3" alt="Le Sserafim">
+        </div>
+        <h2 class="py-2">About Group</h2>
+        <p>
+            <b>LE SSERAFIM (르세라핌)</b> is a 5-member girl group under <b>HYBE</b> and <b>Source Music</b>. 
+            The members currently consist of <b>Kim Chaewon, Sakura, Huh Yunjin, Kazuha,</b> and <b>Hong Eunchae</b>. 
+            LE SSERAFIM officially debuted on May 2, 2022 with their 1st mini album “FEARLESS”. 
+            On July 19, 2022, it was announced that <b>Kim Garam</b> had left the group.
+        </p>
+        <p>Official Greeting: “Hi, we’re LE SSERAFIM.”</p>
+        <p>LE SSERAFIM Fandom Name: FEARNOT (피어나)</p>
+        <hr>
+      </div>
+    </section>
+    <section id="group-members-profile" class="container mt-4">
+        <div class="mx-4">
+          <h2>Group Members Profile</h2>
+          <div class="row">
+            <div class="col-md-4 my-2">
+              <div class="card">
+                <img src="le-sserafim/chaewon.png" class="card-img-top px-4 pt-4" alt="Chaewon">
+                <div class="card-body">
+                  <h5 class="card-title">Kim Chaewon</h5>
+                  <p>
+                    <strong>Stage Name:</strong> Kim Chaewon (김채원)<br>
+                    <strong>Birth Name:</strong> Kim Chae Won (김채원)<br>
+                    <strong>Position(s):</strong> Leader, Vocalist, Dancer<br>
+                    <strong>Birthday:</strong> August 1, 2000<br>
+                    <strong>Chinese Zodiac Sign:</strong> Dragon<br>
+                    <strong>Zodiac Sign:</strong> Leo<br>
+                    <strong>Height:</strong> 164 cm (5’5″)<br>
+                    <strong>Blood Type:</strong> B<br>
+                    <strong>MBTI Type:</strong> ISTP<br>
+                    <strong>Nationality:</strong> Korean<br>
+                    <strong>Representative Emoticon:</strong> 🐯<br>
+                    <strong>Instagram:</strong> <a href="https://www.instagram.com/_chaechae_1/">@_chaechae_1</a><br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 my-2">
+              <div class="card">
+                <img src="le-sserafim/sakura.png" class="card-img-top px-4 pt-4" alt="Sakura">
+                <div class="card-body">
+                  <h5 class="card-title">Sakura</h5>
+                  <p>
+                    <strong>Stage Name:</strong> Sakura (사쿠라)<br>
+                    <strong>Birth Name:</strong> Miyawaki Sakura (宮脇 咲良)<br>
+                    <strong>Position(s):</strong> Vocalist, Rapper, Dancer<br>
+                    <strong>Birthday:</strong> March 19, 1998<br>
+                    <strong>Chinese Zodiac Sign:</strong> Tiger<br>
+                    <strong>Zodiac Sign:</strong> Pisces<br>
+                    <strong>Height:</strong> 163 cm (5’4”)<br>
+                    <strong>Blood Type:</strong> A<br>
+                    <strong>MBTI Type:</strong> INTP<br>
+                    <strong>Nationality:</strong> Japanese<br>
+                    <strong>Representative Emoticon:</strong> 🐱<br>
+                    <strong>Instagram:</strong> <a href="https://www.instagram.com/39saku_chan/">@39saku_chan</a><br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 my-2">
+              <div class="card">
+                <img src="le-sserafim/yunjin.png" class="card-img-top px-4 pt-4" alt="Yunjin">
+                <div class="card-body">
+                  <h5 class="card-title">Huh Yunjin</h5>
+                  <p>
+                    <strong>Stage Name:</strong> Huh Yunjin (허윤진)<br>
+                    <strong>Birth Name:</strong> Huh Yun Jin (허윤진)<br>
+                    <strong>Position(s):</strong> Vocalist, Rapper<br>
+                    <strong>Birthday:</strong> October 8, 2001<br>
+                    <strong>Chinese Zodiac Sign:</strong> Snake<br>
+                    <strong>Zodiac Sign:</strong> Libra<br>
+                    <strong>Height:</strong> 172 cm (5’7.5″)<br>
+                    <strong>Blood Type:</strong> B<br>
+                    <strong>MBTI Type:</strong> INFJ<br>
+                    <strong>Nationality:</strong> Korean-American<br>
+                    <strong>Representative Emoticon:</strong> 🐍<br>
+                    <strong>Instagram:</strong> <a href="https://instagram.com/jenaissante/">@jenaissante</a><br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 my-2">
+              <div class="card">
+                <img src="le-sserafim/Kazuha.png" class="card-img-top px-4 pt-4" alt="Kazuha">
+                <div class="card-body">
+                  <h5 class="card-title">Kazuha</h5>
+                  <p>
+                    <strong>Stage Name:</strong> Kazuha (카즈하)<br>
+                    <strong>Birth Name:</strong> Nakamura Kazuha (中村 一葉)<br>
+                    <strong>Position(s):</strong> Sub-Vocalist, Rapper, Dancer<br>
+                    <strong>Birthday:</strong> August 9, 2003<br>
+                    <strong>Chinese Zodiac Sign:</strong> Goat<br>
+                    <strong>Zodiac Sign:</strong> Leo<br>
+                    <strong>Height:</strong> 170 cm (5’7”)<br>
+                    <strong>Blood Type:</strong> O<br>
+                    <strong>MBTI Type:</strong> INFP<br>
+                    <strong>Nationality:</strong> Japanese<br>
+                    <strong>Representative Emoticon:</strong> 🦢<br>
+                    <strong>Instagram:</strong> <a href="https://www.instagram.com/zuhazana/"></a>@zuhazana<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 my-2">
+              <div class="card">
+                <img src="le-sserafim/eunchae.png" class="card-img-top px-4 pt-4" alt="Eunchae">
+                <div class="card-body">
+                  <h5 class="card-title">Hong Eunchae</h5>
+                  <p>
+                    <strong>Stage Name:</strong> Hong Eunchae (홍은채)<br>
+                    <strong>Birth Name:</strong> Hong Eun Chae (홍은채)<br>
+                    <strong>Position(s):</strong> Vocalist, Lead Dancer, Maknae<br>
+                    <strong>Birthday:</strong> November 10, 2006<br>
+                    <strong>Chinese Zodiac Sign:</strong> Dog<br>
+                    <strong>Zodiac Sign:</strong> Scorpio<br>
+                    <strong>Height:</strong> 169 cm (5’6.5″)<br>
+                    <strong>Blood Type:</strong> A<br>
+                    <strong>MBTI Type:</strong> ISFJ<br>
+                    <strong>Nationality:</strong> Korean<br>
+                    <strong>Representative Emoticon:</strong> 🐈<br>
+                    <strong>Instagram:</strong> <a href="https://instagram.com/hhh.e_c.v"></a>@hhh.e_c.v<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+        </div>     
+      </div>
+    </section>
+    <section id="groups-songs" class="container my-4">
+        <div class="mx-4">
+            <h2 class="py-2">Discography</h2>
+            <p>The list of their discography can be referred to this <a href="https://kprofiles.com/le-sserafim-discography/">website</a></p>
+            <p><b>Follow the artist on Spotify to check out their latest song release</b></p>
+            <iframe src="https://open.spotify.com/embed/artist/4SpbR6yFEvexJuaBpgAU5p?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+    </section>
+      
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-4">
+      <div class="container">
+        <div class="row">
+          <!-- About Section -->
+          <div class="col-md-5 d-flex align-items-start">
+            <img src="assets/Kuro-Pop Film.png" alt="Kuro-Pop Film Logo" class="me-2" style="width: 100px;">
+            <div>
+              <h4 class="m-0">Kuro-Pop Film</h4>
+              <p class="mt-2">
+                Kuro-Pop Film is your ultimate <br> destination for all things K-pop. 
+              </p>
+            </div>
+          </div>
+          
+          <!-- Contact Section -->
+          <div class="col-md-4">
+            <div>
+              <h4>Contact Us</h4>
+              <p>
+                Email: <a href="mailto:kimhansolove93@gmail.com" class="text-white text-decoration-none">kimhansolove93@gmail.com</a><br>
+                Phone: <a href="tel:+60199015976" class="text-white text-decoration-none">+60 19-901 5976</a>
+              </p>
+            </div>
+          </div>
+          
+          <!-- Social Media Links -->
+          <div class="col-md-3">
+            <div>
+              <h4>Follow Us</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://x.com/hfjjoknyang" class="text-white text-decoration-none">Twitter</a></li>
+                <li><a href="https://www.instagram.com/tsukkyhime" class="text-white text-decoration-none">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>    
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2025 Kuro-Pop Film. All Rights Reserved.</p>
+    </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>

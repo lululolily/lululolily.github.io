@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuro-Pop Film</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+
+    a {
+      color: #ff69b4; /* Pink links */
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: #ff85c5; /* Lighter pink hover effect */
+    }
+
+    /* Header */
+    header {
+      background-color: #1a1a1a; /* Darker black for header */
+      border-bottom: 2px solid #ff69b4; /* Pink border */
+    }
+
+    header h2 {
+      color: #ff69b4; /* Pink logo text */
+    }
+
+    header img {
+      border-radius: 50%; /* Rounded logo */
+    }
+
+    /* Sidebar */
+    .offcanvas {
+      background-color: #1a1a1a;
+    }
+
+    .offcanvas h5 {
+      color: #ff69b4;
+    }
+
+    .offcanvas ul li a {
+      font-weight: bold;
+    }
+
+    .offcanvas ul li a:hover {
+      text-decoration: underline;
+      color: #ff85c5;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1a1a1a; /* Dark navbar */
+      border-bottom: 1px solid #ff69b4;
+    }
+
+    .navbar .nav-link {
+      color: #1a1a1a;
+      font-weight: 500;
+    }
+
+    .navbar .nav-link:hover {
+      color: #ff69b4;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background-color: #ff69b4;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #ff85c5;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a1a1a;
+    }
+
+    footer h4 {
+      color: #ff69b4;
+    }
+
+    footer p {
+      color: #ffffff;
+    }
+
+    footer a {
+      color: #ff69b4;
+    }
+
+    footer a:hover {
+      color: #ff85c5;
+    }
+
+    .rating {
+        display: inline-block;
+        font-size: 1.5rem;
+        color: #ff69b4; /* Pink color for the stars */
+    }
+
+    .star {
+        color: #d3d3d3; /* Light gray for empty stars */
+    }
+
+    .star.filled {
+        color: #ff69b4; /* Pink for filled stars */
+    }
+
+  </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white">
+      <div class="container d-flex align-items-center justify-content-between">
+        <!-- Logo -->
+        <div class="d-flex align-items-center">
+            <a href="index.html">
+                <img src="assets/Kuro-Pop Film.png" alt="Kuro-Pop Film Logo" class="me-2" style="width: 75px;">
+            </a>
+          <h2 class="m-0">Kuro-Pop Film</h2>
+        </div>
+        <!-- Sidebar Toggle Button -->
+        <button class="btn btn-outline-light me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- Search Form -->
+        <form>
+          <h5>Search</h5>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search groups...">
+            <button class="btn btn-primary" type="submit">Go</button>
+          </div>
+        </form>
+        <hr>
+        <h5>Navigation</h5>
+        <ul class="list-unstyled">
+          <!-- Featured Groups -->
+          <li class="mb-3">
+            <a href="index.html#hero" class="text-decoration-none text-white fw-bold">Featured Groups</a>
+            <ul class="list-unstyled mt-2 ms-3">
+              <li><a href="stray-kids.html" class="text-decoration-none text-white">Stray Kids</a></li>
+              <li><a href="ateez.html" class="text-decoration-none text-white">ATEEZ</a></li>
+              <li><a href="txt.html" class="text-decoration-none text-white">TXT</a></li>
+              <li><a href="le-sserafim.html" class="text-decoration-none text-white">LE SSERAFIM</a></li>
+              <li><a href="aespa.html" class="text-decoration-none text-white">aespa</a></li>
+            </ul>
+          </li>
+          
+          <!-- Fanart & Fancam Collections -->
+          <li class="mb-3">
+            <a href="fanart-fancam.html" class="text-decoration-none text-white fw-bold">Fanart & Fancam Collections</a>
+            <ul class="list-unstyled mt-2 ms-3">
+              <li><a href="fanart-fancam.html#groups" class="text-decoration-none text-white">Fanart</a></li>
+              <li><a href="fanart-fancam.html#groups" class="text-decoration-none text-white">Fancam</a></li>
+            </ul>
+          </li>
+          
+          <!-- Latest Updates -->
+          <li class="mb-3">
+            <a href="index.html#latest-updates" class="text-decoration-none text-white fw-bold">Latest Updates</a>
+          </li>
+          
+          <!-- Interaction Corner -->
+          <li class="mb-3">
+            <a href="interaction-corner.html" class="text-decoration-none text-white fw-bold">Interaction Corner</a>
+            <ul class="list-unstyled mt-2 ms-3">
+              <li><a href="interaction-corner.html" class="text-decoration-none text-white">Quiz</a></li>
+              <li><a href="interaction-corner.html#forum" class="text-decoration-none text-white">Forum Discussion</a></li>
+            </ul>
+          </li>
+          
+          <!-- About Us -->
+          <li class="mb-3">
+            <a href="about.html" class="text-decoration-none text-white fw-bold">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav w-100 justify-content-around">
+                <li class="nav-item"><a class="nav-link text-center" href="index.html#hero">Featured Groups</a></li>
+              <li class="nav-item"><a class="nav-link text-center" href="fanart-fancam.html">Fanart & Fancam Collections</a></li>
+              <li class="nav-item"><a class="nav-link text-center" href="index.html#latest-updates">Latest Updates</a></li>
+              <li class="nav-item"><a class="nav-link text-center" href="interaction-corner.html">Interaction Corner</a></li>
+                <li class="nav-item"><a class="nav-link text-center" href="about.html">About Us</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>     
+  
+    <section id="groups" class="container mt-4">
+        <div class="mx-4 mb-4">
+          <h1>Fanarts Gallery</h1>
+          <div class="d-grid gap-3" style="grid-template-columns: repeat(3, 1fr);">
+            <img src="fanart/hbdleeknow.PNG" class="img-fluid" alt="Lee Know Birthday">
+            <img src="fanart/hjsogood.PNG" class="img-fluid" alt="Hyunjin So Good">
+            <img src="fanart/hjdominate.PNG" class="img-fluid" alt="Hyunjin dominATE">
+            <img src="fanart/hjart.PNG" class="img-fluid" alt="Hyunjin Jiniret Hat">
+            <img src="fanart/felixelle.PNG" class="img-fluid" alt="Felix Elle">
+            <img src="fanart/hjcheongseol.PNG" class="img-fluid" alt="Hyunjin at Premiere">
+            <img src="fanart/hjairport.PNG" class="img-fluid" alt="Hyunjin Airport">
+            <img src="fanart/IMG_6475.JPG" class="img-fluid" alt="Sakura Crazy">
+            <img src="fanart/IMG_6476.JPG" class="img-fluid" alt="Chaewon Birthday">
+          </div>
+          <hr>
+          <h1>Fancam Gallery</h1>
+          <h2>Photos</h2>
+          <div class="d-grid gap-3" style="grid-template-columns: repeat(3, 1fr);">
+            <img src="fancam/chan.PNG" class="img-fluid" alt="Bang Chan">
+            <img src="fancam/dumpling.PNG" class="img-fluid" alt="Hyunjin">
+            <img src="fancam/hjsing.PNG" class="img-fluid" alt="Hyunjin">
+            <img src="fancam/hjstare.PNG" class="img-fluid" alt="Hyunjin">
+            <img src="fancam/hjyeah.JPG" class="img-fluid" alt="Hyunjin">
+            <img src="fancam/hjsolo.JPG" class="img-fluid" alt="Hyunjin">
+            <img src="fancam/han.PNG" class="img-fluid" alt="Han">
+            <img src="fancam/felix.PNG" class="img-fluid" alt="Felix">
+            <img src="fancam/leeknow.PNG" class="img-fluid" alt="Lee Know">
+            <img src="fancam/IMG_6466.JPG" class="img-fluid" alt="Giselle" style="height: 800px; object-fit: cover;">
+            <img src="fancam/IMG_6467.JPG" class="img-fluid" alt="Giselle" style="height: 800px; object-fit: cover;">
+            <img src="fancam/IMG_6468.JPG" class="img-fluid" alt="Karina" style="height: 800px; object-fit: cover;">
+            <img src="fancam/IMG_6469.JPG" class="img-fluid" alt="Winter" style="height: 800px; object-fit: cover;">
+            <img src="fancam/IMG_6470.JPG" class="img-fluid" alt="Winter" style="height: 800px; object-fit: cover;">
+            <img src="fancam/IMG_6471.JPG" class="img-fluid" alt="Karina" style="height: 800px; object-fit: cover;">
+            <img src="fancam/IMG_6472.JPG" class="img-fluid" alt="Giselle" style="height: 800px; object-fit: cover;">
+            <img src="fancam/IMG_6473.JPG" class="img-fluid" alt="Karina" style="height: 800px; object-fit: cover;">
+            <img src="fancam/IMG_6474.JPG" class="img-fluid" alt="NingNing" style="height: 800px; object-fit: cover;">
+          </div>
+          <h2>Videos</h2>
+          <div class="d-grid gap-3" style="grid-template-columns: repeat(3, 1fr);">
+            <video width="400" controls>
+                <source src="fancam/IMG_6284.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="400" controls>
+                <source src="fancam/IMG_6459.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="400" controls>
+                <source src="fancam/IMG_6460.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="400" controls>
+                <source src="fancam/IMG_6461.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="400" controls>
+                <source src="fancam/IMG_6463.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="400" controls>
+                <source src="fancam/IMG_6464.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section id="review" class="container mt-4">
+        <hr>
+        <div class="mx-4 mb-4">
+            <h1 class="mb-4">Concert Review</h1>
+    
+            <!-- Stray Kids dominATE World Tour in Singapore -->
+            <div class="concert-review">
+                <h3>Stray Kids dominATE World Tour in Singapore</h3>
+                <p>
+                    I got the VIP ticket last minute and managed to get it with a cheaper price. I also made new friends there.
+                    My seat number was Row 10-28. I got goosebumps when I saw the artists for the first time during soundcheck.
+                    I enjoyed the whole concert, but my neck hurts so much because people in front of me are too tall. So,
+                    I couldn't enjoy the concert properly and they keep raising their hands high. I'm glad enough to be able 
+                    to watch them in real life for the first time.
+                </p>
+                <!-- Rating for the concert -->
+                <div class="rating mb-2">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+            </div>
+    
+            <!-- Stray Kids dominATE World Tour in Jakarta -->
+            <div class="concert-review">
+                <h3>Stray Kids dominATE World Tour in Jakarta</h3>
+                <p>
+                    I got the VIP ticket by finding it earlier since I'm picky about where I want to sit. I do not want to sit in
+                    the front row but would like to sit at the back but near the stage, so I could see them properly.
+                    During the concert, I was able to get closer to the stage. This concert made up for the one in Singapore 
+                    since I couldn't enjoy it last time, but I am very much satisfied since Indonesia fans are tolerable.
+                </p>
+                <!-- Rating for the concert -->
+                <div class="rating mb-2">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                </div>
+            </div>
+    
+            <!-- Aespa Synk Parallel Line World Tour in Bangkok -->
+            <div class="concert-review">
+                <h3>Aespa Synk Parallel Line World Tour in Bangkok</h3>
+                <p>
+                    I got the normal ticket category for this concert since I just wanted to get the vibes of the concert.
+                    I enjoyed the setlist so far and I would love to go again to the concert next time. My seat was very 
+                    comfortable, and I could still see the artists from afar.
+                </p>
+                <!-- Rating for the concert -->
+                <div class="rating mb-2">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star">★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+      
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-4">
+      <div class="container">
+        <div class="row">
+          <!-- About Section -->
+          <div class="col-md-5 d-flex align-items-start">
+            <img src="assets/Kuro-Pop Film.png" alt="Kuro-Pop Film Logo" class="me-2" style="width: 100px;">
+            <div>
+              <h4 class="m-0">Kuro-Pop Film</h4>
+              <p class="mt-2">
+                Kuro-Pop Film is your ultimate <br> destination for all things K-pop. 
+              </p>
+            </div>
+          </div>
+          
+          <!-- Contact Section -->
+          <div class="col-md-4">
+            <div>
+              <h4>Contact Us</h4>
+              <p>
+                Email: <a href="mailto:kimhansolove93@gmail.com" class="text-white text-decoration-none">kimhansolove93@gmail.com</a><br>
+                Phone: <a href="tel:+60199015976" class="text-white text-decoration-none">+60 19-901 5976</a>
+              </p>
+            </div>
+          </div>
+          
+          <!-- Social Media Links -->
+          <div class="col-md-3">
+            <div>
+              <h4>Follow Us</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://x.com/hfjjoknyang" class="text-white text-decoration-none">Twitter</a></li>
+                <li><a href="https://www.instagram.com/tsukkyhime" class="text-white text-decoration-none">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>    
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2025 Kuro-Pop Film. All Rights Reserved.</p>
+    </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
